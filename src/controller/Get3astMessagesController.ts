@@ -2,8 +2,8 @@ import { Request, response, Response } from "express"
 import { GetLast3MessagesService } from "../services/GetLast3MessagesService"
 
 
-class Get3astMessagesControllerController {
-    async handle(reques: Request, response: Response){
+class Get3astMessagesController {
+    async handle(request: Request, response: Response){
         const service = new GetLast3MessagesService();
 
         const result = await service.execute();
@@ -12,4 +12,4 @@ class Get3astMessagesControllerController {
     }
 }
 
-export { Get3astMessagesControllerController }
+export { Get3astMessagesController }
