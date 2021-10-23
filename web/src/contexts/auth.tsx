@@ -44,6 +44,8 @@ export function AuthProvider(props: AuthProvider) {
 
         localStorage.setItem('@doWhile:token', token);
 
+        api.defaults.headers.common.authorization = `Bearer ${token}`;
+
         //console.log(user)
         setUser(user)
     }
@@ -54,7 +56,7 @@ export function AuthProvider(props: AuthProvider) {
     }
 
     useEffect(() => {
-        const token = localStorage.getItem('@doWhile:token');                                            
+        const token = localStorage.getItem('@doWhile:token');
 
         if (token) {
             api.defaults.headers.common.authorization = `Bearer ${token}`;
