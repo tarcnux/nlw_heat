@@ -15,6 +15,7 @@ class CreateMessageService {
 
         //Informaçãoes para Web Socket
         const infoWS = {
+            id: message.id,
             text: message.text,
             user_id: message.user_id,
             create_at: message.created_at,
